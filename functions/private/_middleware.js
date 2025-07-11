@@ -1,7 +1,7 @@
 export async function onRequest(context) {
   const page = await context.next();
-  const myUser = "testuser";
-  const myPass = "testpass";
+  const myUser = "user";
+  const myPass = "pass";
   const unauthorizedResponse = new Response('Password Required', {
     status: 401,
     headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' }
